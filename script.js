@@ -4,19 +4,25 @@ const btn = document.querySelector(".btn");
 let squares;
 
 function drawGrid(squares) {
-    console.log("Draw grid function called: ", squares);
-    const totalSquares = squares * squares;
-    gridContainer.textContent = "";
-    for(let i = 0; i < totalSquares; i++) {
-        const div = document.createElement("div");
-        div.classList.add("square");
-        div.textContent = i.toString();
-        gridContainer.appendChild(div);
+    // clear the previous grid
+    gridContainer.textContent = "";        
+
+    // calculate the size of each square
+    const squareSize = 800 / squares;
+
+    // Add new squares to the grid
+    for(let i = 0; i < squares * squares; i++) {
+        const square = document.createElement("div");
+        /*square.innerText = i;*/
+        square.classList.add("square");               
+        square.style.width = `${squareSize}px`;
+        square.style.height = `${squareSize}px`;
+        gridContainer.appendChild(square);
     }
 }
 
 btn.addEventListener("click", function() {
-    squares = prompt("Enter grid squares required: ", '');
-    drawGrid(squares);
+    let squares = parseInt(prompt("Enter grid squares per side required", '0'));
+    drawGrid(squares);    
 });
 
