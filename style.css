@@ -13,12 +13,35 @@
     box-sizing: border-box;
 }
 
+.square:hover {
+    display: block;
+    background-color: red; 
+    /*opacity: 1;*/
+    /*transition: 2s */ 
+}
+
 h2 {
     text-align: center;
+    color:brown;
 }
 
 .btn {
-    text-align: center;
+    text-align: center;    
+}
+
+span {
+    color:brown;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+button {
+   width: 100px;
+   height: 30px; 
+}
+
+body {
+    background-color: antiquewhite;
 }
 
 
