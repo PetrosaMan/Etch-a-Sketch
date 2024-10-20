@@ -29,14 +29,13 @@ function drawGrid(squares) {
 }
 
 btn.addEventListener("click", function() {
-    let squares = parseInt(prompt("Enter grid squares per side required", '0'));
-    console.log('squares required: ', squares);
-    if(squares === 0) {
+    let squares = parseInt(prompt("Enter grid squares per side required", '0'));    
+    if(squares === 0 || isNaN(squares)) {
          alert( "Invalid entry, try again");
          return;
-    } else if (isNaN(squares)) {
+    /*} else if (isNaN(squares)) {
         alert  ('Invalid input, try again');
-        return;
+        return;*/
     }
     drawGrid(squares);    
 });

@@ -1,10 +1,15 @@
+body {
+    background-color: beige
+}
+
 .grid-container {
     display:flex;
     flex-wrap: wrap;
     width: 600px;
     height: 600px;          
     margin   : 0 auto; 
-    margin-top: 50px;     
+    margin-top: 50px; 
+    border: solid 3px black;    
 }
 
 .square {
@@ -40,9 +45,7 @@ button {
    background-color: beige;
 }
 
-body {
-    background-color: beige
-}
+
 
 
 
