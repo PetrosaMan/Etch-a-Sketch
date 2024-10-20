@@ -8,8 +8,8 @@ let squares;
 
 function drawGrid(squares) {
     // clear the previous grid
-    gridContainer.textContent = "";        
-
+    gridContainer.textContent = "";     
+    
     // calculate the size of each square
     const squareSize = 600 / squares;
 
@@ -27,14 +27,12 @@ function drawGrid(squares) {
             const r = parseInt(Math.random() * 255);
             const g = parseInt(Math.random() * 255);
             const b = parseInt(Math.random() * 255);
-            square.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b  +')';            
+            square.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b  +')';                      
         });
         
         gridContainer.appendChild(square);
     }
 }
-
-
 
 btn.addEventListener("click", function() {
     let squares = parseInt(prompt("Enter grid squares per side required. Maximum 100 squares", '0'));    
