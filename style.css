@@ -15,13 +15,13 @@ body {
 .square {
     border: 1px solid black;    
     box-sizing: border-box;
-    background-color: lightcyan;   
+    background-color: lightcyan;  
 }
 
-.square.hovered {
+/*.square.hovered {
     background-color: salmon; 
 }
-
+*/
 
 h2 {
     text-align: center;
